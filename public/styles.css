@@ -1,0 +1,39 @@
+body,html{
+  background-image: url("background.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-color: black;
+  height: 100%;
+display: grid;
+}
+
+.center-me{
+  margin:auto;
+  color:white;
+}
+
+.title2{
+  font-family: 'Dancing Script', cursive;
+  text-align: center;
+  font-size: 4rem;
+}
+
+.form-control{
+  width:26rem;
+}
+
+td{
+  padding-bottom: 1rem;
+}
+
+button{
+  margin-top: 1rem;
+  margin-left: 10rem;
+}
+
+/* select{
+  max-height:50px;  // you choice of number in pixels
+   overflow-x:hidden; // hides the horizontal scroll
+   overflow-y:auto;   // enables the vertical scroll
+} */

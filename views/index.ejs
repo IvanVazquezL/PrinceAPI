@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>PrinceAPI</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="center-me">
+      <form class="" action="/" method="post">
+      <p class="title2">PrinceAPI</p>
+      <table>
+        <tr>
+          <td>
+       Chapter:&nbsp;
+   </td>
+   <td>
+       <div class="chapters">
+         <select class="scroll" name="chapters" onchange="addChapter(event)" id="chapters">
+  <option disabled selected>Select a chapter</option>
+    <option value="0">Dédicace</option>
+    <option value="1">Premiere Chapitre</option>
+    <option value="2">II</option>
+    <option value="3">III</option>
+    <option value="4">IV</option>
+    <option value="5">V</option>
+    <option value="6">VI</option>
+    <option value="7">VII</option>
+    <option value="8">VIII</option>
+    <option value="9">IX</option>
+    <option value="10">X</option>
+    <option value="11">XI</option>
+    <option value="12">XII</option>
+    <option value="13">XIII</option>
+    <option value="14">XIV</option>
+    <option value="15">XV</option>
+    <option value="16">XVI</option>
+    <option value="17">XVII</option>
+    <option value="18">XVIII</option>
+    <option value="19">XIX</option>
+    <option value="20">XX</option>
+    <option value="21">XXI</option>
+    <option value="22">XXII</option>
+    <option value="23">XXIII</option>
+    <option value="24">XXIV</option>
+    <option value="25">XXV</option>
+    <option value="26">XXVI</option>
+    <option value="27">XXVII</option>
+
+  </select>
+       </div>
+   </td>
+        </tr>
+        <tr>
+          <td>
+       Languages:&nbsp;
+   </td>
+   <td>
+       <div class="multiselect noselect">
+           <input type="checkbox" id="blf-cb1" onchange="addLanguage(event)" value="fr" ><label for="blf-cb1">French&nbsp;</label>
+           <input type="checkbox" id="blf-cb2" onchange="addLanguage(event)" value="en"><label for="blf-cb2">English&nbsp;</label>
+           <input type="checkbox" id="blf-cb3" onchange="addLanguage(event)" value="es"><label for="blf-cb3">Spanish</label>
+       </div>
+   </td>
+        </tr>
+      </table>
+      <input class="form-control" type="text" id="apiLink" name="apiLink" value="http://127.0.0.1:8080/quotes/">
+<button type="submit" class="btn btn-primary">Request</button>
+  </form>
+    </div>
+
+<script src="routing.js" charset="utf-8"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+       <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+  </body>
+</html>

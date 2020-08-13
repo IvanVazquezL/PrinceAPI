@@ -1,0 +1,26 @@
+{
+  {
+      _id: 0,
+      chapter: 0,
+      en: "All grown−ups were once children. (Although few of them remember it.)",
+      es:"Todas las personas grandes fueron alguna vez niños. (Pero pocas de entre ellas lo recuerdan.) ",
+      fr: "Toutes les grandes personnes ont d’abord été des enfants. (Mais peu d’entre elles s’en souviennent.)"
+  },
+
+  {
+      _id: 0,
+      chapter: 0,
+      lang: {
+      en: "All grown−ups were once children. (Although few of them remember it.)",
+      es:"Todas las personas grandes fueron alguna vez niños. (Pero pocas de entre ellas lo recuerdan.) ",
+      fr: "Toutes les grandes personnes ont d’abord été des enfants. (Mais peu d’entre elles s’en souviennent.)"
+      }
+  },
+   { "_id": 1,
+    "chapter": 1,
+    "en": "When I was six years old, I saw once, a magnificent picture, in a book about the primeval forest called 'Lived Stories'",
+    "es": "Cuando tenía seis años vi, una vez, una imagen magnífica en un libro sobre la Selva Virgen que se llamaba 'Historias Vividas'",
+    "fr": "Lorsque j’avais six ans j’ai vu, une fois, une magnifique image, dans un livre sur la Forêt Vierge qui s’appelait « Histoires Vécues »"
+  }
+
+}

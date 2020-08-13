@@ -1,0 +1,66 @@
+            app.get("/about/chapter=:chapterNumber",function(req,res){
+              console.log(req.params.chapterNumber);
+
+              var lang = req.query.lang;
+              console.log(lang);
+                    collection.find({chapter:parseInt(req.params.chapterNumber)}, {es:true}).toArray(function(err, data){
+                        res.send(data);
+                        console.log(data);
+                    })
+                        });
+
+app.get("/quotes/chapter=:chapterNumber?lang=:language",function(req,res){
+  console.log(req.params);
+          collection.find({chapter:parseInt(req.params.chapterNumber)}, {[`"lang.${req.params.language.replace(/['"]+/g, '')}"`]:1}).toArray(function(err, data){
+            console.log(data)
+                res.send(data);
+        })
+
+
+
+    })
+
+
+////////
+
+var connection = mongoose.connection;
+
+connection.on('error', console.error.bind(console, 'connection error:'));
+connection.once('open', function () {
+
+    connection.db.collection("quotes", function(err, collection){
+
+      app.get("/",function(req,res){
+        res.render("index");
+      });
+
+      app.post("/",function(req,res){
+        console.log("apiLink: "+req.body.apiLink);
+        res.redirect(req.body.apiLink);
+      });
+
+      app.get("/quotes",function(req,res){
+        collection.find({}).toArray(function(err, data){
+            res.send(data);
+        })
+      });
+
+      app.get("/quotes/chapter=:chapter",function(req,res){
+        collection.find({chapter:parseInt(req.params.chapter)}).toArray(function(err, data){
+            res.send(data);
+        })
+      });
+
+      app.get("/quotes/lang=fr",function(req,res){
+        collection.find({}).select({
+      fr: 1,
+    }).then(function (data) {
+            res.send(data);
+        }).catch(function (err) {
+        return next(new Error(err.message || err));
+    })
+      });
+
+});
+});
+////////////////////////////////
